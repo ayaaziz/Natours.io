@@ -1,0 +1,20 @@
+@mixin clearfix {
+    &:after,
+    &:before {
+        content: "";
+        display: table;
+        clear: both;
+    }
+}
+
+@mixin gradient-text {
+    background-image: linear-gradient(to right, $color-green-light,$color-green-dark);
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    background-clip: text;
+    color: transparent;    
+}
+
+@mixin gradient-background($color-dark,$color-light,$opacity) {
+    background-image: linear-gradient(to right bottom,rgba($color-light,$opacity) 0%,rgba($color-dark,$opacity) 50%);
+}

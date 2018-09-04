@@ -1,0 +1,58 @@
+body {
+    font-family: Lato,sans-serif;
+    padding: 3rem 3rem;
+    color: #777; 
+  }
+
+  .heading-primary {
+    color: $white-color;
+    margin-bottom: 7rem; 
+  
+    span {
+        display: block;
+        font-weight: 400; 
+    }
+    
+    &--main {
+      font-size: 5rem;
+      letter-spacing: 3.5rem;
+      animation: moveTextToRight 1.5s ease-out;
+      backface-visibility: hidden; /*to solve animation shaky*/ 
+    }
+    
+    &--sub {
+      font-size: 1.9rem;
+      letter-spacing: 1.5rem;
+      animation: moveTextToLeft 1.5s ease-out;
+      backface-visibility: hidden; /*to solve animation shaky*/ 
+    }
+  }
+
+  .heading-secondary {
+    font-size:  3.9rem;
+    letter-spacing: .1rem;
+    font-weight: 700;
+    transition: all .3s linear;
+    @include gradient-text;
+
+    &:hover {
+      transform: skewX(20deg) skewY(5deg);
+      text-shadow: .5rem 1rem 2rem rgba(#000,.3);    
+    }
+  }
+
+    .heading-teriary {
+        font-size: 1.6rem;
+        font-weight: 700;
+        margin-bottom: 1.5rem;
+    }
+
+    .paragraph {
+        font-size: 1.6rem;
+        line-height: 2rem;
+
+        &:not(:last-of-type) {
+          margin-bottom: 4.5rem;
+        }
+    }
+

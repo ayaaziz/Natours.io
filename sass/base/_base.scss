@@ -1,0 +1,20 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inhherit; 
+}
+
+/**************** Root Element font-size ***************/
+html {
+    /*define what 1rem equal*/
+  font-size: 62.5%; /*10px=1rem*/
+ }
+
+/************** Body Style **************/
+body {
+  box-sizing: border-box;
+}
+
+

@@ -1,0 +1,37 @@
+.composition {
+    position: relative;
+
+    &__photo {
+        width: 55%;
+        position: absolute;
+        outline-offset: 15px;
+        transition: all .2s;
+        box-shadow: 10px 20px 40px rgba($color-black,.5);
+
+        &--p1 {
+            top: -1.5rem;
+            left: 1.5rem;
+        }
+
+        &--p2 {
+            top: 3rem;
+            left: 25rem;
+        }
+
+        &--p3 {
+            top: 11rem;
+            left: 25%;
+        }
+
+
+        &:hover {
+            z-index: 20;
+            transform: scale(1.05) translateY(-1px);
+            outline: 15px solid $color-primary;
+        }
+    }
+    
+    &:hover &__photo:not(:hover) { //when hover on composition div ,do this to the not hovered photos
+        transform: scale(.9);                    
+    }
+}
