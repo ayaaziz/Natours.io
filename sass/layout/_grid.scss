@@ -1,11 +1,11 @@
 //GRID
 .row {
     // background-color: $color-gray-light;
+    margin: 0 auto;
     margin-bottom: $gutter-vertical;
     max-width: 110rem; //1100px
-    margin: 0 auto;
   
-    @include clearfix;
+    @include clearfix; //must separate between rows because of floating
   
     [class^="col-"] {
       float: left;

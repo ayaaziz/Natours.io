@@ -136,6 +136,9 @@ body {
 .u-margin-top-big {
   margin-top: 6rem; }
 
+.u-margin-top-small {
+  margin-top: 2rem; }
+
 .btn:link {
   text-decoration: none;
   padding: 2rem 4.5rem;
@@ -331,6 +334,51 @@ body {
       font-size: 5.7rem;
       font-weight: 100; }
 
+.story {
+  background-color: rgba(255, 255, 255, 0.2);
+  width: 70%;
+  margin: 0 auto;
+  padding: 7rem;
+  font-size: 1.6rem;
+  transform: skewX(-15deg);
+  box-shadow: 0rem 1rem 3.5rem rgba(0, 0, 0, 0.1);
+  line-height: 2.5rem; }
+  .story:after, .story:before {
+    content: "";
+    display: table;
+    clear: both; }
+  .story__figure {
+    width: 15rem;
+    height: 15rem;
+    color: #fff;
+    float: left;
+    -webkit-shape-outside: circle(50% at 50% 50%);
+    -moz-shape-outside: circle(50% at 50% 50%);
+    shape-outside: circle(50% at 50% 50%);
+    clip-path: circle(50% at 50% 50%);
+    transform: translateX(-22px) skewX(15deg);
+    position: relative; }
+  .story__img {
+    height: 100%;
+    transform: translateX(-4rem) scale(1.4);
+    transition: all .1s; }
+  .story__person {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-37%, 10%);
+    font-size: 2rem;
+    transition: all .1s;
+    opacity: 0; }
+  .story:hover .story__person {
+    transform: translate(-37%, -50%);
+    opacity: 1; }
+  .story:hover .story__img {
+    filter: blur(4px) brightness(80%);
+    transform: translateX(-4rem) scale(1); }
+  .story__details {
+    transform: skewX(15deg); }
+
 .header {
   height: 95vh;
   background-image: linear-gradient(to right bottom, rgba(40, 180, 131, 0.63) 0%, rgba(126, 213, 111, 0.58) 80%), url("../img/hero-small.jpg");
@@ -354,9 +402,9 @@ body {
     text-align: center; }
 
 .row {
-  margin-bottom: 4rem;
-  max-width: 110rem;
-  margin: 0 auto; }
+  margin: 0 auto;
+  margin-bottom: 8rem;
+  max-width: 110rem; }
   .row:after, .row:before {
     content: "";
     display: table;
@@ -396,3 +444,6 @@ body {
   padding: 22rem 0 10rem;
   background-color: #f7f7f7;
   margin-top: -79px; }
+
+.section-stories {
+  padding: 15rem 0; }
