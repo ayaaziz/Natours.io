@@ -1,5 +1,6 @@
 .btn {
-    &:link { //normal state
+    &,
+    &:link, &:visited { //normal state
       text-decoration: none;
       padding: 2rem 4.5rem;
       border-radius: 30rem;
@@ -7,7 +8,10 @@
       position: relative;       
       display: inline-block;   
       font-size: 1.5rem; 
-      text-transform: uppercase;            
+      text-transform: uppercase;
+      
+      //style for button that has class btn
+      outline: none;          
     }
   
     &--white {

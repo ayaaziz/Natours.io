@@ -3,7 +3,8 @@
 *::before {
   margin: 0;
   padding: 0;
-  box-sizing: inhherit; 
+  // box-sizing: inhherit; 
+  box-sizing: border-box;
 }
 
 /**************** Root Element font-size ***************/

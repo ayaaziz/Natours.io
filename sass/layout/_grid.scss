@@ -2,11 +2,15 @@
 .row {
     // background-color: $color-gray-light;
     margin: 0 auto;
-    margin-bottom: $gutter-vertical;
+    
     max-width: 110rem; //1100px
   
     @include clearfix; //must separate between rows because of floating
   
+    &:not(:last-child) {
+      margin-bottom: $gutter-vertical;
+    }
+
     [class^="col-"] {
       float: left;
     //   background-color: $color-red;

@@ -12,7 +12,22 @@
 
     </head>
     <body>
-
+        <div class="navigation">
+            <input type="checkbox" class="navigation__checkbox" id="check-nav">
+            <label for="check-nav" class="navigation__label">
+                <span class="navigation__icon">&nbsp;</span>
+            </label>
+            <div class="navigation__background">&nbsp;</div>
+            <nav class="navigation__nav">
+                <ul class="navigation__list">
+                    <li class="navigation__item"><a class="navigation__link" href="#">01 About Natours</a></li>
+                    <li class="navigation__item"><a class="navigation__link" href="#">02 Your Benfits</a></li>
+                    <li class="navigation__item"><a class="navigation__link" href="#">03 Popular Tours</a></li>
+                    <li class="navigation__item"><a class="navigation__link" href="#">04 Stories</a></li>
+                    <li class="navigation__item"><a class="navigation__link" href="#">05 Book Now</a></li>
+                 </ul>
+            </nav>
+        </div>
         <header class="header">
             <div class="header__logo-container">
                 <img src="img/logo-white.png" alt="logo" class="header__logo">
@@ -155,22 +170,15 @@
                </div>
             </section>
             <section class="section-stories">
+                <div class="bg-video">
+                    <video class="bg-video__content" autoplay >
+                        <source src="img/video.mp4" type="video/mp4">
+                        <source src="img/video.webm" type="video/webm">
+                            Your Browser Not Supported!
+                    </video>
+                </div>
                 <div class="u-center-text u-margin-bottom-big u-capital-text">
                     <h2 class="heading-secondary">We Make People Genuinely Happy</h2>
-                 </div>
-                <div class="row">
-                    <div class="story">
-                        <figure class="story__figure">
-                            <img src="img/nat-8.jpg" class="story__img" alt="a person had a tour">
-                            <figcaption class="story__person u-capital-text">
-                                Mary Smith
-                            </figcaption>
-                        </figure>
-                        <div class="story__details">
-                            <h4 class="heading-teriary u-capital-text">I Had The Best Week Ever With My Family</h4>
-                            <p class="story__paragraph">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam, ipsum sapiente aspernatur libero repellat quis consequatur ducimus quam nisi exercitationem omnis earum qui. Aperiam, ipsum sapiente aspernatur libero repellat quis consequatur ducimus quam nisi exercitationem omnis earum qui.</p>
-                        </div>
-                    </div>
                 </div>
                 <div class="row">
                     <div class="story">
@@ -186,13 +194,90 @@
                         </div>
                     </div>
                 </div>
-                
+                <div class="row">
+                    <div class="story">
+                        <figure class="story__figure">
+                            <img src="img/nat-8.jpg" class="story__img" alt="a person had a tour">
+                            <figcaption class="story__person u-capital-text">
+                                Mary Smith
+                            </figcaption>
+                        </figure>
+                        <div class="story__details">
+                            <h4 class="heading-teriary u-capital-text">I Had The Best Week Ever With My Family</h4>
+                            <p class="story__paragraph">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam, ipsum sapiente aspernatur libero repellat quis consequatur ducimus quam nisi exercitationem omnis earum qui. Aperiam, ipsum sapiente aspernatur libero repellat quis consequatur ducimus quam nisi exercitationem omnis earum qui.</p>
+                        </div>
+                    </div>
+                </div>
                 <div class="u-center-text">
                     <a href="#" class="btn-learn-more">Read All Stories &rarr;</a>
                 </div>
             </section>
+            <section class="section-booking">
+                <div class="row">
+                    <div class="book">
+                        <div class="book__form">
+                            <div class="u-margin-bottom-medium">
+                                <h2 class="heading-secondary u-capital-text">Start Book Now</h2>
+                            </div>
+                            <form action="#" class="form">
+                                <div class="form__group">
+                                    <input type="text" class="form__input" id="name" placeholder="Full name" required>
+                                    <label for="name" class="form__label">Full name</label>
+                                </div>
+                                <div class="form__group">
+                                    <input type="email" class="form__input" id="email" placeholder="Email address" required>
+                                    <label for="email" class="form__label">Email address</label>
+                                </div>
+                                <div class="form__group u-margin-bottom-medium">
+                                    <div class="form__radio-group">
+                                        <input type="radio" class="form__radio-input" id="small" name="tourgroup">
+                                        <label for="small" class="form__radio-label">
+                                            <span class="form__radio-button"></span>
+                                             small tour group
+                                        </label>
+                                    </div>
+                                    <div class="form__radio-group">
+                                        <input type="radio" class="form__radio-input" id="large" name="tourgroup">
+                                        <label for="large" class="form__radio-label">
+                                            <span class="form__radio-button"></span>
+                                            large tour group
+                                        </label>
+                                    </div>       
+                                </div>
+                                <div class="form__group">
+                                    <button type="submit" class="btn btn--green">Next Step &rarr;</button>
+                                 </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </section>
         </main>
+        <footer class="footer">
+            <div class="row footer__logo-container">
+                <img src="img/logo-green-2x.png" alt="footer logo" class="footer__logo">
+            </div>
+            <div class="row">
+                <div class="col-1-of-2">
+                        <ul class="footer__nav">
+                        <li><a class="footer__link" href="#">Company</a></li>
+                        <li><a class="footer__link" href="#">Contact Us</a></li>
+                        <li><a class="footer__link" href="#">Carrers</a></li>
+                        <li><a class="footer__link" href="#">Privacy Policy</a></li>
+                        <li><a class="footer__link" href="#">Terms</a></li>
+                    </ul>
+                </div>
+                <div class="col-1-of-2">
+                    <p class="footer__description">Lorem ipsum dolor sit, <a href="#" class="footer__link">amet consectetur</a> adipisicing elit. Exercitationem voluptates sed molestiae <a href="#" class="footer__link">soluta?</a> Dolor aliquam optio nulla minima placeat nesciunt consequatur excepturi reprehenderit harum maxime maiores cupiditate, officiis deleniti corporis</p>
+                </div>
+            </div>
+        </footer>
 
+        <div class="popup">
+            <div class="popup__content">
+                popup
+            </div>
+        </div>
         <!-- <div class="row">
             <div class="col-1-of-2">1 of 2</div>
             <div class="col-1-of-2">1 of 2</div>            
