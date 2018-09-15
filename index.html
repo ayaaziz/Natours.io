@@ -6,7 +6,7 @@
         <title>Natours | Exciting tours</title>
 
         <link href="https://fonts.googleapis.com/css?family=Lato:100,300,400,700" rel="stylesheet">
-        <link rel="stylesheet" href="css/font-icon.css">
+        <!-- <link rel="stylesheet" href="css/font-icon.css"> became in style.css file-->
         <link rel="shortcut icon" type="image" href="img/favicon.png">
         <link rel="stylesheet" href="css/style.css">
 
@@ -57,9 +57,23 @@
                     </div>
                     <div class="col-1-of-2">
                         <div class="composition">
-                            <img src="img/nat-1-large.jpg" alt="pic1" class="composition__photo composition__photo--p1">
-                            <img src="img/nat-2-large.jpg" alt="pic2" class="composition__photo composition__photo--p2">
-                            <img src="img/nat-3-large.jpg" alt="pic3" class="composition__photo composition__photo--p3">
+                            <img srcset="img/nat-1-large.jpg 1000w,img/nat-1.jpg 300w"
+                                 alt="pic1"
+                                 sizes="media(max-width:37.5em) 23vw,media(max-width:56.25em) 38vw, 300w"
+                                 src="img/nat-1.jpg"
+                                 class="composition__photo composition__photo--p1">
+
+                            <img srcset="img/nat-2-large.jpg 1000w,img/nat-2.jpg 300w"
+                                 alt="pic2"
+                                 sizes="media(max-width:37.5em) 23vw,media(max-width:56.25em) 38vw, 300w"
+                                 src="img/nat-2.jpg"
+                                 class="composition__photo composition__photo--p2">
+
+                            <img srcset="img/nat-3-large.jpg 1000w,img/nat-3.jpg 300w"
+                                 alt="pic3"
+                                 sizes="media(max-width:37.5em) 23vw,media(max-width:56.25em) 38vw, 300w"
+                                 src="img/nat-3.jpg"
+                                 class="composition__photo composition__photo--p3">
                         </div>
                     </div>                    
                 </div>               
@@ -118,7 +132,7 @@
                             <div class="tour-box__side tour-box__side--back tour-box__side--back-1">
                                 <p class="tour-box__paragraph tour-box__paragraph--only">Only</p>
                                 <p class="tour-box__paragraph tour-box__paragraph--price">$297</p>
-                                <a href="#" class="btn btn--white">Book Now!</a>
+                                <a href="#popup" class="btn btn--white">Book Now!</a>
                             </div>
                         </div>
                    </div>
@@ -139,7 +153,7 @@
                                 <div class="tour-box__side tour-box__side--back tour-box__side--back-2">
                                     <p class="tour-box__paragraph tour-box__paragraph--only">Only</p>
                                     <p class="tour-box__paragraph tour-box__paragraph--price">$297</p>
-                                    <a href="#" class="btn btn--white">Book Now!</a>
+                                    <a href="#popup" class="btn btn--white">Book Now!</a>
                                 </div>
                             </div>
                    </div>
@@ -160,7 +174,7 @@
                             <div class="tour-box__side tour-box__side--back tour-box__side--back-3">
                                 <p class="tour-box__paragraph tour-box__paragraph--only">Only</p>
                                 <p class="tour-box__paragraph tour-box__paragraph--price">$297</p>
-                                <a href="#" class="btn btn--white">Book Now!</a>
+                                <a href="#popup" class="btn btn--white">Book Now!</a>
                             </div>
                         </div>
                    </div>        
@@ -171,7 +185,7 @@
             </section>
             <section class="section-stories">
                 <div class="bg-video">
-                    <video class="bg-video__content" autoplay >
+                    <video autoplay loop class="bg-video__content">
                         <source src="img/video.mp4" type="video/mp4">
                         <source src="img/video.webm" type="video/webm">
                             Your Browser Not Supported!
@@ -183,7 +197,12 @@
                 <div class="row">
                     <div class="story">
                         <figure class="story__figure">
-                            <img src="img/nat-8.jpg" class="story__img" alt="a person had a tour">
+                            <!-- <img src="img/nat-8.jpg" class="story__img" alt="a person had a tour"> -->
+                            <img srcset="img/nat-8-small.jpg 1200w ,img/nat-8.jpg 2000w" 
+                                sizes="media(max-width:56.25em) 20vw,media(max-width:37.5em)  30vw"
+                                class="story__img"
+                                alt="a person had a tour"
+                                src="img/nat-8-small.jpg">
                             <figcaption class="story__person u-capital-text">
                                 Mary Smith
                             </figcaption>
@@ -197,9 +216,14 @@
                 <div class="row">
                     <div class="story">
                         <figure class="story__figure">
-                            <img src="img/nat-8.jpg" class="story__img" alt="a person had a tour">
+                            <!-- <img src="img/nat-9.jpg" class="story__img" alt="a person had a tour"> -->
+                            <img srcset="img/nat-9-small.jpg 1200w ,img/nat-9.jpg 2000w" 
+                                sizes="media(max-width:56.25em) 20vw,media(max-width:37.5em)  30vw"
+                                class="story__img"
+                                alt="a person had a tour"
+                                src="img/nat-9-small.jpg">
                             <figcaption class="story__person u-capital-text">
-                                Mary Smith
+                                Jack Wilson
                             </figcaption>
                         </figure>
                         <div class="story__details">
@@ -209,7 +233,7 @@
                     </div>
                 </div>
                 <div class="u-center-text">
-                    <a href="#" class="btn-learn-more">Read All Stories &rarr;</a>
+                    <a href="#" class="btn-learn-more">Read all stories &rarr;</a>
                 </div>
             </section>
             <section class="section-booking">
@@ -254,8 +278,20 @@
             </section>
         </main>
         <footer class="footer">
-            <div class="row footer__logo-container">
-                <img src="img/logo-green-2x.png" alt="footer logo" class="footer__logo">
+            <div class="footer__logo-container">
+                <picture>
+                    <source srcset="img/logo-green-small-2x.png 2x,img/logo-green-small-1x.png 1x"
+                            media="(max-width:37.5em)"
+                            src="img/logo-green-small-2x.png"
+                            alt="footer logo"
+                            class="footer__logo">
+
+                    <img srcset="img/logo-green-2x.png 2x,img/logo-green-1x.png 1x"
+                        src="img/logo-green-2x.png"
+                         alt="footer logo"
+                         class="footer__logo">
+                </picture>
+               
             </div>
             <div class="row">
                 <div class="col-1-of-2">
@@ -273,9 +309,22 @@
             </div>
         </footer>
 
-        <div class="popup">
+        <div class="popup" id="popup">
             <div class="popup__content">
-                popup
+                <div class="popup__left">
+                        <img src="img/nat-8.jpg" alt="Tour Photo" class="popup__img">
+                        <img src="img/nat-9.jpg" alt="Tour Photo" class="popup__img">
+                </div>
+                <div class="popup__right">
+                    <h2 class="heading-secondary u-margin-bottom-small">Start Booking Now</h2>
+                    <h3 class="heading-teriary u-margin-bottom-small">Important &ndash; Please Read These Terms Before Booking</h3>
+                    <p class="popup__text u-margin-bottom-medium">
+                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eius, earum similique aut quibusdam quia dolor. Nesciunt error cum perferendis repudiandae itaque soluta sequi distinctio, ullam molestias assumenda cumque! Minima.
+                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Laborum totam quae maxime pariatur ratione. Ipsam, reprehenderit quo voluptates odit cupiditate, molestiae laborum saepe eligendi est corporis fuga numquam necessitatibus distinctio.
+                    </p>
+                    <a href="#" class="btn btn--green">Book Now</a>
+                </div>
+                <a class="popup__close" href="#section-tours">&times;</a>
             </div>
         </div>
         <!-- <div class="row">

@@ -5,6 +5,11 @@
 
     &__logo-container {
         text-align: center;
+        margin-bottom: 8rem;
+
+        @include respond("tab-port") {
+            margin-bottom: 5rem;
+        }
     }
 
     &__logo {
@@ -15,7 +20,8 @@
         list-style: none;
         border-top: 1px solid $color-gray-dark;
         padding-top: 2rem;
-        display: inline-block;
+        // display: inline-block;
+        float: left;
         cursor: pointer;
 
 
@@ -30,7 +36,10 @@
             } 
         }
 
-       
+       @include respond("tab-port") {
+           float: none;
+           text-align: center;
+       }
     }
 
     &__link  {
@@ -53,10 +62,15 @@
 
     &__description {
         color: $color-gray-light2;
-        width: 90%;
+        width: 85%;
         float: right;
         line-height: 2.5rem;
         border-top: 1px solid $color-gray-dark;
         padding-top: 2rem;
+
+        @include respond("tab-port") {
+            float: none;
+            width: 100%;
+        }
     }
 }

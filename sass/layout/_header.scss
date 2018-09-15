@@ -6,10 +6,23 @@
     clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
     position: relative;
   
+    @include responsive-img  { //2000px is the large img width(hero.jpg)
+      background-image: linear-gradient(to right bottom, rgba(40, 180, 131, 0.63) 0%, rgba(126, 213, 111, 0.58) 80%), url("../img/hero.jpg");
+    }
+
+    @include respond("tab-land") {
+      clip-path: polygon(0 0, 100% 0, 100% 80vh, 0 100%);
+    }
+
+
     &__logo-container {
       position: absolute;
       top: 3rem;
       left: 3rem; 
+
+      @include respond("tab-land") {
+        top: 5rem;
+      }
     }
     
     &__logo {

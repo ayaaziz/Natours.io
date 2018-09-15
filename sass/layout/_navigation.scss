@@ -15,18 +15,30 @@
         border-radius: 50%;
         z-index: 2000;
         text-align: center;
+        box-shadow: 0 1rem 2rem rgba($color-black,.2);
+
+
+        @include respond("phone") {
+            top: 4rem;
+            right: 4.5rem;
+        }
     }
 
     &__background {
         width: 6rem;
         height: 6rem;
-        background-image: radial-gradient($color-green-light,$color-primary);
+        background-image: radial-gradient(rgba(126, 213, 111,1) 0%,rgba(40, 180, 131,1) 30%);
         position: fixed;
         top: 7.5rem;
         right: 7rem;
         border-radius: 50%;
         z-index: 1000;
-        transition: all .8s; //for transform of background (scale)
+        transition: transform .8s; //for transform of background (scale)
+
+        @include respond("phone") {
+            top: 4.5rem;
+            right: 5rem;
+        }
 
     }
 

@@ -10,37 +10,67 @@
     box-shadow: 0rem 1rem 3.5rem rgba($color-black,.1);
     line-height: 2.5rem;
 
+    @include respond("tab-port") {
+        width: 100%;
+    }
+    
+    @include respond("phone") {
+        transform: skewX(0);
+    }
+
     &__figure {
         width: 15rem;
         height: 15rem;
         color: $white-color;
         float: left;
-        -webkit-shape-outside: circle(50% at 50% 50%);
-        -moz-shape-outside: circle(50% at 50% 50%);
-        shape-outside: circle(50% at 50% 50%);
-        clip-path: circle(50% at 50% 50%);
+
+        //if shape-outside not supported by browser
+        // margin-right: 3rem;
+
+        //if shape-outside supported by browser
+        @supports(-webkit-shape-outside: circle(50% at 50% 50%)) or (-moz-shape-outside: circle(50% at 50% 50%)) or (shape-outside: circle(50% at 50% 50%)) {
+            -webkit-shape-outside: circle(50% at 50% 50%);
+            -moz-shape-outside: circle(50% at 50% 50%);
+            shape-outside: circle(50% at 50% 50%);
+        }
+
+        //if clip-path not supported by browser        
+        border-radius: 50%;
+        overflow: hidden;
+
+        //if clip-path supported by browser        
+        @supports(clip-path: circle(50% at 50% 50%)) {
+            clip-path: circle(50% at 50% 50%);
+            border-radius: 0;
+            // overflow: visible;
+        }
         transform: translateX(-22px) skewX(15deg);
         position: relative;
+        text-align: center;
+
+        @include respond("phone") {
+            transform: translateX(-22px) skewX(0);
+        }
     }
 
     &__img {
         height: 100%;
         transform: translateX(-4rem) scale(1.4);
-        transition: all .1s;        
+        transition: all .4s; 
     }
 
     &__person {
         position: absolute;
         top: 50%;
         left: 50%;
-        transform: translate(-37%,10%);        
+        transform: translate(-50%,20%);        
         font-size: 2rem;
-        transition: all .1s;
+        transition: all .4s;
         opacity: 0;
     }
 
     &:hover  &__person {
-        transform: translate(-37%,-50%);
+        transform: translate(-50%,-50%);
         opacity: 1;
     }
 
@@ -51,5 +81,9 @@
 
     &__details {
         transform: skewX(15deg);
+   
+        @include respond("phone") {
+            transform: skewX(0);
+        }
     }
 }

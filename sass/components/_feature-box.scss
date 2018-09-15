@@ -3,6 +3,7 @@
     text-align: center;
     padding: 4rem 2.6rem;
     font-size: $default-font-size;  
+
     transition: transform .3s;  
     border-radius: 4px;
 
@@ -11,6 +12,11 @@
         display: inline-block;        
         margin-bottom: 2.5rem;
         @include gradient-text;
+
+        
+        @include respond("tab-port") {
+            font-size: 4rem;  
+        }
     }
 
     &:hover {

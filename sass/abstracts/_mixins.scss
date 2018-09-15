@@ -8,13 +8,52 @@
 }
 
 @mixin gradient-text {
-    background-image: linear-gradient(to right, $color-green-light,$color-green-dark);
-    -webkit-background-clip: text;
-    -moz-background-clip: text;
-    background-clip: text;
-    color: transparent;    
+
+    color: $color-primary;
+    
+    @supports(-webkit-background-clip: text)or(background-clip: text) or (-moz-background-clip: text) {
+        background-image: linear-gradient(to right, $color-green-light,$color-green-dark);
+        -webkit-background-clip: text;
+        -moz-background-clip: text;
+        background-clip: text;
+        color: transparent; 
+    }   
 }
 
 @mixin gradient-background($color-dark,$color-light,$opacity) {
     background-image: linear-gradient(to right bottom,rgba($color-light,$opacity) 0%,rgba($color-dark,$opacity) 50%);
+}
+
+//Media query Manager
+/*
+0-600px           phone
+600-900px         tab-port
+900-1200px        tab-land
+[1200-1800px]     normal style that we done
+1800+             big-desktop
+*/
+@mixin respond($breakpoint) {
+    @if($breakpoint == "phone") {
+        @media(max-width:37.5em) {@content;}  //600px (600/16)
+    }
+    @if($breakpoint == "tab-port") {
+        @media(max-width:56.25em) {@content;}   //900px
+    }
+    @if($breakpoint == "tab-land") {
+        @media(max-width:75em) {@content;}    //1200px
+    }
+    @if($breakpoint == "phone") {
+        @media(min-width:112.5em) {@content;}  //1800px
+    }
+}
+
+
+//Responsive background images Mixin
+@mixin responsive-img {
+    // 1-big viewport with high resolution(2x)  OR  2-very big viewport than photo width (with or without high-res)
+    @media(min-resolution: 192dpi) and (min-width: 37.5em),
+    (min-device-pixel-ratio:2), //for safari
+    (min-width: 2000px) {
+        @content;
+    }
 }

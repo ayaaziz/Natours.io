@@ -8,30 +8,68 @@
         transition: all .2s;
         box-shadow: 10px 20px 40px rgba($color-black,.5);
 
+        @include respond("tab-port") {
+            width: 33.33333333333333%;
+            position: relative;
+            float: left;
+        }
+
         &--p1 {
             top: -1.5rem;
             left: 1.5rem;
+
+            @include respond("tab-port") {
+                top: 2rem;
+                left: 4rem;
+            }
         }
 
         &--p2 {
             top: 3rem;
             left: 25rem;
+
+            @include respond("tab-port") {
+                top: 0;
+                left: 2rem;
+                z-index: 3;
+            }
         }
 
         &--p3 {
             top: 11rem;
             left: 25%;
+
+            @include respond("tab-port") {
+                top: 2rem;
+                left: -1rem;
+            }
         }
 
 
         &:hover {
             z-index: 20;
             transform: scale(1.05) translateY(-1px);
-            outline: 15px solid $color-primary;
+
+            //if outline not supported by the browser
+            border: 15px solid $color-primary;
+            padding: 15px;
+
+            //if outline supported by the browser
+            @supports (-webkit-outline:none) or (outline: none) {
+                outline: 15px solid $color-primary; 
+                border: none;
+                padding: 0;               
+            }
+
+            @include respond("tab-port") {
+                z-index: 20;
+                transform: scale(1.05) translateY(-1px);
+                outline: none;
+            }
         }
     }
     
     &:hover &__photo:not(:hover) { //when hover on composition div ,do this to the not hovered photos
-        transform: scale(.9);                    
+        transform: scale(.9);    
     }
 }
