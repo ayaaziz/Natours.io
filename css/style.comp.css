@@ -32,6 +32,10 @@ body {
     body {
       padding: 0; } }
 
+::selection {
+  background-color: #44BE7E;
+  color: #fff; }
+
 @keyframes moveTextToRight {
   0% {
     transform: translateX(-30rem);

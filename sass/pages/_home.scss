@@ -61,7 +61,7 @@
 
 .book {
     background-image: linear-gradient(105deg,rgba($white-color,.9) 0%,rgba($white-color,.9) 50%,transparent 50%),
-                        url(../../img/nat-10-small.jpg);
+                        url(../img/nat-10-small.jpg);
     background-size: 100%; //cover
     height: 50rem;
     background-repeat: no-repeat;
@@ -69,16 +69,16 @@
 
     @include responsive-img {
         background-image: linear-gradient(105deg,rgba($white-color,.9) 0%,rgba($white-color,.9) 50%,transparent 50%),
-        url(../../img/nat-10.jpg);
+        url(../img/nat-10.jpg);
     }
     
     @include respond("tab-port") {
         background-image: linear-gradient(105deg,rgba($white-color,.9) 0%,rgba($white-color,.9) 100%),
-                        url(../../img/nat-10-small.jpg);
+                        url(../img/nat-10-small.jpg);
 
         @include responsive-img {
             background-image: linear-gradient(105deg,rgba($white-color,.9) 0%,rgba($white-color,.9) 100%),
-                        url(../../img/nat-10.jpg);
+                        url(../img/nat-10.jpg);
         }
 
         background-size: cover; //cover

@@ -1,4 +1,4 @@
-.bg-video {
+.bg-video { //by default color transparent
     position: absolute;
     top: 0;
     left: 0;
@@ -6,6 +6,7 @@
     height: 100%;
     opacity: .2;
     overflow: hidden;
+    z-index: -1; //to be before content to make the button above it 
 
     &__content {
         width: 100%;

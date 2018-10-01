@@ -59,33 +59,33 @@
 
         &--1 {
             background-image: linear-gradient(to right bottom,$color-orange-dark,$color-orange-light),
-                                url(../../img/nat-5-small.jpg);
+                                url(../img/nat-5-small.jpg);
 
             @include responsive-img {
                 background-image: linear-gradient(to right bottom,$color-orange-dark,$color-orange-light),
-                url(../../img/nat-5.jpg);
+                url(../img/nat-5.jpg);
             }
 
         }
 
         &--2 {
             background-image: linear-gradient(to right bottom,$color-green-dark,$color-green-light),
-                                url(../../img/nat-6-small.jpg);
+                                url(../img/nat-6-small.jpg);
 
             @include responsive-img {
                 background-image: linear-gradient(to right bottom,$color-green-dark,$color-green-light),
-                url(../../img/nat-6.jpg);
+                url(../img/nat-6.jpg);
             }
 
         }
 
         &--3 {
             background-image: linear-gradient(to right bottom,$color-blue-dark,$color-blue-light),
-                                url(../../img/nat-7-small.jpg);
+                                url(../img/nat-7-small.jpg);
 
             @include responsive-img {
                 background-image: linear-gradient(to right bottom,$color-blue-dark,$color-blue-light),
-                url(../../img/nat-7.jpg);
+                url(../img/nat-7.jpg);
             }
         }
     }
@@ -153,7 +153,8 @@
     } 
     
     
-    @include respond("tab-port") {
+    @media only screen and (max-width:56.25em),
+            only screen and (hover:none) {
         height: auto;
         background-color: $white-color;
         box-shadow: 1rem 1rem 4rem rgba($color-black,.1),
